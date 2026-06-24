@@ -67,8 +67,12 @@ flutter run
 
 Phase 0 (Research Assets & Documentation) — COMPLETE  
 Phase 1 (Repository & Architecture Setup) — COMPLETE  
+Phase 2 (Backend Foundation — Supabase) — COMPLETE  
+Phase 3 (Local Database — Drift + DAOs) — COMPLETE  
+Phase 4 (Synchronization Engine) — COMPLETE  
+Phase 5 (Authentication — Phone OTP) — COMPLETE  
 
-Next up: Phase 2 (Backend Foundation — Supabase)
+Next up: Phase 6 (Core Business Features — Sales, Expenses, Inventory, Reporting)
 
 ## Documentation
 
