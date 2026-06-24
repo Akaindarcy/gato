@@ -11,7 +11,8 @@ class SalesPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final repo = ProductRepositoryImpl();
+    final db = ref.watch(databaseProvider);
+    final repo = ProductRepositoryImpl(db);
     final products = ref.watch(productProvider(repo));
 
     return Scaffold(

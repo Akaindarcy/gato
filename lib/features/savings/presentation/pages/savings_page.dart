@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../domain/entities/savings_goal.dart';
-import '../../../domain/repositories/savings_repository.dart';
-import '../../../../data/repositories/product_repository_impl.dart';
+import '../repositories/savings_repository.dart';
+import '../../../../data/repositories/savings_repository_impl.dart';
 
 class SavingsPage extends ConsumerWidget {
   const SavingsPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final repo = SavingsRepositoryImpl();
+    final db = ref.watch(databaseProvider);
+    final repo = SavingsRepositoryImpl(db);
     final goals = ref.watch(savingsProvider(repo));
 
     return Scaffold(
