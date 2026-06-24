@@ -1,0 +1,9 @@
+import 'package:gato/domain/entities/transaction.dart';
+import 'package:gato/domain/entities/business.dart';
+import 'package:gato/domain/entities/savings_goal.dart';
+import 'package:gato/domain/entities/trust_score.dart';
+import 'package:gato/domain/entities/loan.dart';
+import 'package:gato/domain/entities/insurance_product.dart';
+import 'package:gato/domain/entities/community_group.dart';
+import 'package:gato/domain/entities/achievement.dart';
+import 'package:gato/domain/entities/voice_command.dart';
