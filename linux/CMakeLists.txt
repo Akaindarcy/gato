@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(gato LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../flutter" "${CMAKE_CURRENT_BINARY_DIR}/flutter" EXCLUDE_FROM_ALL)
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../../linux" "${CMAKE_CURRENT_BINARY_DIR}/linux" EXCLUDE_FROM_ALL)

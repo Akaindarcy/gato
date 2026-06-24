@@ -1,12 +1,14 @@
-import 'package:gato/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:gato/data/datasources/remote/supabase_client.dart';
 import 'routes/app_router.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
+  await SupabaseClientProvider.initialize();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  AppTheme.setSystemUI();
   runApp(const GatoApp());
 }
 
@@ -18,7 +20,6 @@ class GatoApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'GATO',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
       routerConfig: AppRouter.router,
     );
   }

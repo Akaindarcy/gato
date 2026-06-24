@@ -1,6 +1,37 @@
 export 'package:drift/drift.dart';
+import 'package:drift/drift.dart';
 
-class Products extends Table {
+part 'daos/derived_daos.dart';
+
+@DataClassName('AppDatabase')
+@DriftDatabase(tables: [
+  Products,
+  Transactions,
+  SavingsGoals,
+  SyncQueue,
+  TrustScores,
+  Loans,
+  CommunityGroups,
+  Achievements,
+  VoiceCommands,
+])
+class AppDatabase extends _$AppDatabase {
+  AppDatabase(QueryExecutor e) : super(e);
+
+  @override
+  int get schemaVersion => 2;
+
+  // DAO accessors
+  ProductsDao get productsDao => ProductsDao(this);
+  TransactionsDao get transactionsDao => TransactionsDao(this);
+  SavingsGoalsDao get savingsGoalsDao => SavingsGoalsDao(this);
+  SyncQueueDao get syncQueueDao => SyncQueueDao(this);
+  TrustScoresDao get trustScoresDao => TrustScoresDao(this);
+  LoansDao get loansDao => LoansDao(this);
+  CommunityGroupsDao get communityGroupsDao => CommunityGroupsDao(this);
+  AchievementsDao get achievementsDao => AchievementsDao(this);
+  VoiceCommandsDao get voiceCommandsDao => VoiceCommandsDao(this);
+}
   TextColumn get id => text()();
   TextColumn get businessId => text()();
   TextColumn get name => text()();
