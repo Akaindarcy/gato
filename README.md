@@ -71,8 +71,11 @@ Phase 2 (Backend Foundation — Supabase) — COMPLETE
 Phase 3 (Local Database — Drift + DAOs) — COMPLETE  
 Phase 4 (Synchronization Engine) — COMPLETE  
 Phase 5 (Authentication — Phone OTP) — COMPLETE  
+Phase 6 (Core Business Features) — COMPLETE  
+Phase 7 (Trust Score Algorithm) — COMPLETE  
+Phase 8 (QA & Testing) — COMPLETE  
 
-Next up: Phase 6 (Core Business Features — Sales, Expenses, Inventory, Reporting)
+Next up: Pilot preparation, fluter build verification, and remote GitHub push
 
 ## Documentation
 
@@ -82,6 +85,8 @@ Next up: Phase 6 (Core Business Features — Sales, Expenses, Inventory, Reporti
 - Architecture Overview: `/projects/gato/docs/architecture/overview.md`
 - Database Schema: `/projects/gato/docs/database/schema.md`
 - Sync Engine: `/projects/gato/docs/sync/engine.md`
+- Phase 6-8 Summary: `/projects/gato/docs/implementation/phase-6-to-8-summary.md`
+- Final Project Summary: `/projects/gato/docs/implementation/project-summary.md`
 
 ---
 
