@@ -1,0 +1,9 @@
+export 'package:gato/services/ai_service/ai_extension.dart';
+export 'package:gato/services/config.dart';
+export 'package:gato/services/sync_service/config/sync_protocol.dart';
+export 'package:gato/services/sms_service/sms_service.dart';
+export 'package:gato/services/ussd_service/ussd_service.dart';
+export 'package:gato/services/whatsapp_service/whatsapp_service.dart';
+export 'package:gato/services/voice_service/voice_service.dart';
+export 'package:gato/services/trust_score_service/trust_score_service.dart';
+export 'package:gato/services/ai_service/ai_coach_service.dart';

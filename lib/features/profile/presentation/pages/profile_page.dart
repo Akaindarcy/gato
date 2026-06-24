@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import '../../../../domain/entities/business.dart';
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      appBar: AppBar(title: Text('Profile')),
+      body: Center(child: Text('Profile feature coming soon.')),
+    );
+  }
+}

@@ -1,0 +1,12 @@
+export 'presentation/pages/sales_page.dart';
+export 'presentation/pages/expenses_page.dart';
+export 'presentation/pages/inventory_page.dart';
+export 'presentation/pages/reports_page.dart';
+export 'presentation/pages/savings_page.dart';
+export 'presentation/pages/profile_page.dart';
+export '../onboarding/presentation/pages/onboarding_page.dart';
+export '../community/presentation/pages/community_page.dart';
+export '../coach/presentation/pages/coach_page.dart';
+export '../credit/presentation/pages/credit_page.dart';
+export '../loans/presentation/pages/loans_page.dart';
+export '../voice/presentation/pages/voice_page.dart';
