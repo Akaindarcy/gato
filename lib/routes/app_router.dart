@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import '../features/auth/presentation/pages/login_page.dart';
 import '../features/sales/presentation/pages/sales_page.dart';
 import '../features/expenses/presentation/pages/expenses_page.dart';
 import '../features/inventory/presentation/pages/inventory_page.dart';
@@ -17,8 +18,9 @@ class AppRouter {
   static GoRouter get router => _router;
 
   static final GoRouter _router = GoRouter(
-    initialLocation: '/onboarding',
+    initialLocation: '/login',
     routes: [
+      GoRoute(path: '/login', builder: (c, s) => const LoginPage()),
       GoRoute(path: '/onboarding', builder: (c, s) => const OnboardingPage()),
       GoRoute(path: '/', builder: (c, s) => const SalesPage()),
       GoRoute(path: '/sales', builder: (c, s) => const SalesPage()),
