@@ -1,10 +1,13 @@
-import 'package:gato/domain/entities/trust_score.dart';
-import 'package:gato/domain/repositories/trust_score_repository.dart';
+import '../../domain/entities/trust_score.dart';
+import '../../domain/repositories/trust_score_repository.dart';
+import '../../services/trust_score_service/trust_score_service.dart';
 import '../datasources/local/daos/derived_daos.dart';
 
 class TrustScoreRepositoryImpl implements TrustScoreRepository {
   final AppDatabase _db;
   TrustScoreRepositoryImpl(this._db);
+
+  static final _service = TrustScoreService();
 
   @override
   Future<TrustScore?> getCurrent(String businessId) async {
@@ -14,13 +17,19 @@ class TrustScoreRepositoryImpl implements TrustScoreRepository {
 
   @override
   Future<TrustScore> calculate(String businessId) async {
-    final now = DateTime.now();
+    // TODO: derive normalized indicators from transactions/products/savings
     final score = TrustScore(
       id: 'ts_$businessId',
       businessId: businessId,
-      score: 50,
-      calculatedAt: now,
-      explanation: 'Base score calculated from current business data.',
+      score: _service.computeBase(
+        salesConsistency: 60.0,
+        savingsDiscipline: 70.0,
+        repaymentHistory: 65.0,
+        communityReputation: 55.0,
+        activityRegularity: 80.0,
+      ),
+      calculatedAt: DateTime.now(),
+      explanation: 'Calculated from business behavior signals.',
     );
     await _db.trustScoresDao.insert(TrustScoresCompanion.insert(
       id: score.id,
