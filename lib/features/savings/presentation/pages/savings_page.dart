@@ -3,8 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../domain/entities/savings_goal.dart';
-import '../repositories/savings_repository.dart';
-import '../../../../data/repositories/savings_repository_impl.dart';
+import '../../../../presentation/providers/database_provider.dart';
+import '../../../../presentation/providers/savings_provider.dart';
+import '../../../../data/repositories_impl/savings_repository_impl.dart';
 
 class SavingsPage extends ConsumerWidget {
   const SavingsPage({super.key});

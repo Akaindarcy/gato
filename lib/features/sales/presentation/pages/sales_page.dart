@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../domain/entities/transaction.dart';
-import '../../providers/product_provider.dart';
-import '../../../../data/repositories/product_repository_impl.dart';
+import '../../../../presentation/providers/database_provider.dart';
+import '../../../../presentation/providers/product_provider.dart';
+import '../../../../data/repositories_impl/product_repository_impl.dart';
 
 class SalesPage extends ConsumerWidget {
   const SalesPage({super.key});
